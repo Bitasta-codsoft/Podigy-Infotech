@@ -1,0 +1,43 @@
+#include<stdio.h>
+float main()
+{
+  int choice;
+  float cel,kel,fah;
+  printf("Enter 1- convert from celcius to kelvin and fahrenheit, 2- fahrenheit to kelvin and celcius, 3- kelvin to fahrenheit and celcius");
+  printf("\nEnter your choice!\n");
+  scanf("%lf",&choice);
+  switch(choice)
+  {
+     case 1:
+     printf("Enter temperature in celcius:");
+     scanf("%lf",&cel);
+     kel= cel+273.15;
+     fah= (cel*1.8)+32.0;
+     printf("Temperature in kelvin= ",kel, "K");
+     printf("Temperature in fahrenheit= ",fah, "°F");
+     break;
+     case 2:
+     printf("Enter temperature in fahrenheit:");
+     scanf("%lf",&fah);
+     kel= (fah-32.0)*(5.0/9)+273.15;
+     cel= (fah-32.0)*(5.0/9);
+     printf("Temperature in kelvin= ",kel, "K");
+     printf("Temperature in celcius= ",cel, "°C");
+     break;
+     case 3:
+     printf("Enter temperature in kelvin:");
+     scanf("%lf",&kel);
+     fah= (kel-273.15)*1.8+32.0;
+     cel= kel-273.15;
+     printf("Temperature in fahrenheit= ",fah, "°F");
+     printf("Temperature in celcius= ",cel, "°C");
+     break;
+     default:
+     printf("Wrong Input!");
+  }
+  return 0;
+}
+
+
+
+
