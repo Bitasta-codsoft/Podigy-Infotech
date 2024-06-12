@@ -1,0 +1,27 @@
+#include<stdio.h> 
+#include<stdlib.h> 
+int main()
+{
+  int upper_limit=10;
+  int i,value,guess;
+  value= rand() % (upper_limit+1);
+  for(i=0;i<10;i++)
+  {
+    printf("Enter a random number between 0 and 10: %d",&guess);
+    if(guess!=value)
+    {
+      if(guess<value)
+      printf("Guess is too less!");
+      else
+      printf("Guess is too high!");
+    }
+    else
+    {
+    printf("Correct guess!\nNumber is:",value);
+    break;
+    }
+  }
+return 0;
+}
+
+    
